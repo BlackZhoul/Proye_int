@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="font-sans antialiased dark:text-white/70 w-full">
+<body class="font-sans antialiased w-full">
 
     <div class="bg-[#e8e8e8] text-black/65">
         <div class="relative min-h-screen flex flex-col items-center justify-center">
