@@ -6,13 +6,13 @@ use App\Http\Controllers\NewsController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('/');
 
 Route::get('/noticias', [NewsController::class, 'index'])->name('noticias');
-Route::get('/inicio', [NewsController::class, 'index'])->name('inicio');
 Route::get('/repositorio', function(){ return view('repositorio.index');})->name('repositorio');
-Route::get('/acerca', [NewsController::class, 'index'])->name('acerca');
-Route::get('/catalogo', [NewsController::class, 'index'])->name('catalogo');
+Route::get('/catalogo', function(){ return view('catalogo.index');})->name('catalogo');
+
+Route::get('/acerca',  function(){ return view('acerca.index');})->name('acerca');
 
 
 Route::get('/dashboard', function () {

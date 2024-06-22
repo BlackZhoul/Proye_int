@@ -30,7 +30,7 @@
                     @if (Route::has('login'))
                         <nav class=" pl-7 py-2 pr-10 bg-dark_black md:flex md:items-center md:justify-between ">
                             <div>
-                                <a href="{{ route('login') }}"
+                                <a href="{{ route('/') }}"
                                     class="rounded-md text-white flex flex-col items-center text-center ">
                                     <span class="font-bold text-4xl">CEDITEC</span>
                                     <span class="text-xs leading-">Centro de Documentación</span>
@@ -40,7 +40,7 @@
 
                             <ul class="md:flex md:items-center text-lg">
                                 <li>
-                                    <a href="{{ route('inicio') }}" class="nav-link">
+                                    <a href="{{ route('/') }}" class="nav-link">
                                         Inicio
                                     </a>
                                 </li>
