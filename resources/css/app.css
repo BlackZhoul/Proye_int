@@ -5,7 +5,7 @@
 
 
 .nav-link {
-    @apply relative rounded-md ml-8 py-3 text-white/75 hover:text-white tracking-[1px]
+    @apply relative rounded-md py-3 text-white/75 hover:text-white tracking-[1px] md:text-lg
 }
 .nav-link::after{
     @apply content-[''] bg-[#2db4d1] h-[3px] w-[0%] absolute left-0 bottom-[6px] rounded-xl duration-300 
@@ -14,5 +14,5 @@
     @apply w-[100%]
 }
 .card{
-    @apply bg-white py-4 px-6 rounded-xl max-w-[320px] shadow-xl
+    @apply bg-white /*---*/ py-4 px-6 rounded-xl max-w-[320px] shadow-xl
 }

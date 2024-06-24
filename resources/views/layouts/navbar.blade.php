@@ -16,29 +16,30 @@
     <link href="https://fonts.bunny.net/css?family=poppins:400,600&display=swap" rel="stylesheet" />
 
     <!-- Styles -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
-<body class="font-sans antialiased w-full">
+<body class="w-full h-screen font-sans antialiased">
 
     <div class="bg-[#e8e8e8] text-black/65">
-        <div class="relative min-h-screen flex flex-col items-center justify-center">
-            <div class="relative w-full">
-                <header>
+        <div class="w-full">
+            <header>
 
-                    @if (Route::has('login'))
-                        <nav class=" pl-7 py-2 pr-10 bg-dark_black md:flex md:items-center md:justify-between ">
-                            <div>
-                                <a href="{{ route('/') }}"
-                                    class="rounded-md text-white flex flex-col items-center text-center ">
-                                    <span class="font-bold text-4xl">CEDITEC</span>
-                                    <span class="text-xs leading-">Centro de Documentación</span>
-                                    <span class="text-xs leading-none">e Información</span>
-                                </a>
-                            </div>
+                @if (Route::has('login'))
+                    <nav class="px-[2%] flex items-center justify-between py-2 bg-dark_black">
+                        <div class="">
+                            <a href="{{ route('/') }}"
+                                class="flex flex-col items-center text-center text-white">
+                                <span class="text-2xl font-bold md:text-4xl">CEDITEC</span>
+                                <span class="text-[12px] leading-none">Centro de Documentación<br>e Información</span>
+                            </a>
+                        </div>
 
-                            <ul class="md:flex md:items-center text-lg">
+                        <div class="md:static md:w-auto md:min-h-fit absolute top-0 left-0 bg-dark_black min-h-[60vh] w-full flex items-center px-[2%]">
+                            <ul class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8">
                                 <li>
                                     <a href="{{ route('/') }}" class="nav-link">
                                         Inicio
@@ -82,25 +83,25 @@
                                 @endauth
 
                             </ul>
-                        </nav>
-                    @endif
-                    
-                    @yield('repositorio_banner')
+                        </div>
+                    </nav>
+                @endif
 
-                </header>
+                @yield('repositorio_banner')
 
-
-                <main>
-
-                    @yield('content')
-
-                </main>
+            </header>
 
 
-                <footer class="py-16 text-center text-base text-white dark:text-white/70 bg-dark_black">
-                    <span> &copy; {{ date('Y') }} Tecsup All rights reserved</span>
-                </footer>
-            </div>
+            <main>
+
+                @yield('content')
+
+            </main>
+
+
+            <footer class="w-full py-16 text-center text-white bg-dark_black">
+                <span> &copy; {{ date('Y') }} Tecsup All rights reserved</span>
+            </footer>
         </div>
     </div>
 
