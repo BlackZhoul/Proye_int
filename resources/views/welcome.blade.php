@@ -5,20 +5,20 @@
     </div>
 
     <div class="flex justify-center">
-        <div class="flex flex-col bg-black rounded-full w-2/3 m-4">
+        <div class="flex flex-col w-2/3 m-4 bg-black rounded-full">
             <form action="{{ url('/') }}" class="relative m-4">
-                <input type="text" placeholder="Busca en nuestro catálogo en línea" class="rounded-full w-full h-12">
-                <div class="absolute pr-5 pb-1 inset-y-0 right-0 flex items-center pointer-events-none"><i
+                <input type="text" placeholder="Busca en nuestro catálogo en línea" class="w-full h-12 rounded-full">
+                <div class="absolute inset-y-0 right-0 flex items-center pb-1 pr-5 pointer-events-none"><i
                         class="fas fa-search fa-lg" style="color: #000000;"></i></div>
             </form>
         </div>
     </div>
 
-
-    <div class="flex flex-row justify-evenly mt-16 mb-12">
+{{-- PRUEBA --}}
+    <div class="flex flex-row mt-16 mb-12 justify-evenly">
         <div class="card">
-            <span class="font-semibold text-dark_black text-xl">Reserva</span>
-            <p class="py-6 px-9 text-justify">Reserva salas de estudio y computadoras.</p>
+            <span class="text-xl font-semibold text-dark_black">Reserva</span>
+            <p class="py-6 text-justify px-9">Reserva salas de estudio y computadoras.</p>
             <div class="flex flex-row justify-center ">
                 <button
                     class=" p-2 active:bg-[#e7e7e7] duration-200 box-border border-2 text-[#2DB4D1] border-[#2DB4D1] font-poppins font-semibold">Solicitar
@@ -26,8 +26,8 @@
             </div>
         </div>
         <div class="card">
-            <span class="font-semibold text-dark_black text-xl">Préstamos</span>
-            <p class="py-6 px-8 text-justify">Préstamos de tablets y calculadoras.</p>
+            <span class="text-xl font-semibold text-dark_black">Préstamos</span>
+            <p class="px-8 py-6 text-justify">Préstamos de tablets y calculadoras.</p>
             <div class="flex flex-row justify-center">
                 <button
                     class=" p-2 active:bg-[#e7e7e7] duration-200 box-border border-2 text-[#2DB4D1] border-[#2DB4D1] font-poppins font-semibold">Solicitar
@@ -37,8 +37,8 @@
         </div>
 
         <div class="card">
-            <span class="font-semibold text-dark_black text-xl">Base de datos</span>
-            <p class="py-6 px-8 text-justify">Consulta libros electrónicos y bases de datos.</p>
+            <span class="text-xl font-semibold text-dark_black">Base de datos</span>
+            <p class="px-8 py-6 text-justify">Consulta libros electrónicos y bases de datos.</p>
             <div class="flex flex-row justify-center">
                 <button type="button" onclick=""
                     class=" p-2 active:bg-[#e7e7e7] duration-200 box-border border-2 text-[#2DB4D1] border-[#2DB4D1] font-poppins font-semibold">Ver
@@ -49,7 +49,7 @@
     </div>
     <div class="w-full bg-white text-dark_black">
         <div class="">
-            <h2 class="font-semibold font-poppins text-2xl pl-12 py-4">BÚSQUEDA POR DEPARTAMENTO</h2>
+            <h2 class="py-4 pl-12 text-2xl font-semibold font-poppins">BÚSQUEDA POR DEPARTAMENTO</h2>
             <div class="flex flex-row justify-around">
                 <div>
                     <button class="text-8xl font-poppins">
@@ -80,7 +80,7 @@
         </div>
         <div>
 
-            <h2 class="text-2xl font-semibold font-poppins pl-12 py-4">NOTICIAS</h2>
+            <h2 class="py-4 pl-12 text-2xl font-semibold font-poppins">NOTICIAS</h2>
 
             <div class="flex justify-evenly">
                 <div class="bg-black">
