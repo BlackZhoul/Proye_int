@@ -14,7 +14,7 @@
         </div>
     </div>
 
-{{-- PRUEBA --}}
+{{-- PRUEBA 2 --}}
     <div class="flex flex-row mt-16 mb-12 justify-evenly">
         <div class="card">
             <span class="text-xl font-semibold text-dark_black">Reserva</span>
