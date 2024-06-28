@@ -8,6 +8,6 @@
 @endsection
 @section('content')
     <div class="min-h-screen">
-        <br x->
+        <br>
     </div>
 @endsection
