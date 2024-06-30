@@ -88,7 +88,7 @@
                                 <i class="fa-solid fa-bars text-white"  ></i>
                             </span>
 
-                            <div class="absolute top-[74px] left-0 bg-white w-full py-4 z-10 pl-9 md:hidden"
+                            <div class="absolute top-[74px] left-0 bg-dark_black w-full py-4 z-10 pl-9 md:hidden"
                             
                             :class="open ? '' : 'hidden'">
                                 <ul class="flex flex-col gap-4">
