@@ -130,6 +130,11 @@
                                                 Inicia sesión
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="{{ route('administrador') }}" class="nav-link">
+                                                Administración
+                                            </a>
+                                        </li>
                                        
                                     @endauth
 
