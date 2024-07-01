@@ -15,7 +15,14 @@ Route::get('/catalogo', function(){ return view('catalogo.index');})->name('cata
 Route::get('/bd', function(){ return view('bd.index');})->name('bd');
 // Agrega por Angie la primera vista del Administrador
 Route::get('/administrador', function(){ return view('administrador.index');})->name('administrador');
-//Aquí termina
+Route::get('/administrador', function(){ return view('administrador.reservas');})->name('administrador');
+Route::get('/administrador', function(){ return view('administrador.prestamos');})->name('administrador');
+Route::get('/administrador', function(){ return view('administrador.reservaSala');})->name('administrador');
+Route::get('/administrador', function(){ return view('administrador.reservaComputadoras');})->name('administrador');
+Route::get('/administrador', function(){ return view('administrador.prestamoTablets');})->name('administrador');
+Route::get('/administrador', function(){ return view('administrador.prestamoCalculadoras');})->name('administrador');
+Route::get('/administrador', function(){ return view('administrador.prestamoLibro');})->name('administrador');
+// Aquí termina
 
 
 Route::get('/acerca',  function(){ return view('acerca.index');})->name('acerca');
