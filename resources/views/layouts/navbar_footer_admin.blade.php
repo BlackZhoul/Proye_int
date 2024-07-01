@@ -23,7 +23,7 @@
 
 <body class="font-sans antialiased">
 
-    <div class="bg-gray-200 text-black/65">
+    <div class="bg-gray-200 text-black/65 h-screen">
         <div class="w-full">
             <header>
 
@@ -179,14 +179,14 @@
             </header>
 
 
-            <main>
+            <main class="h-full">
 
                 @yield('content')
 
             </main>
 
 
-            <footer class="w-full py-8 text-center text-white bg-dark_black">
+            <footer class="absolute  bottom-0 w-full py-8 text-center text-white bg-dark_black">
                 <span> &copy; {{ date('Y') }} Tecsup All rights reserved</span>
             </footer>
         </div>

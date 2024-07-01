@@ -5,6 +5,12 @@ use Illuminate\Support\Facades\Route;use App\Http\Controllers\InicioAppControlle
 use App\Http\Controllers\PrestamoController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\TabletController;
+use App\Http\Controllers\LibroController;
+use App\Http\Controllers\CalculadoraController;
+
+
+
 
 
 
@@ -45,9 +51,31 @@ Route::middleware('bibliotecario')->prefix('admin')->as('admin.')->group(functio
 
 
     Route::get('/materiales', function(){ return view('administrador.materiales.index');})->name('materiales');
+
+
+
+    Route::get('/materiales/libros', [LibroController::class,'create'])->name('gestion.libros');
+    Route::get('/materiales/libros', [LibroController::class,'detail'])->name('detalle.calculadora');
+    Route::get('/materiales/libros', [LibroController::class,'update'])->name('editar.calculadora');
+    Route::get('/materiales/libros', [LibroController::class,'create'])->name('eliminar.calculadora');
+
+
+
+    Route::get('/materiales/calculadoras', [CalculadoraController::class,'create'])->name('gestion.calculadoras');
+    Route::get('/materiales/calculadoras', [CalculadoraController::class,'detail'])->name('detalle.calculadora');
+    Route::get('/materiales/calculadoras', [CalculadoraController::class,'update'])->name('editar.calculadora');
+    Route::get('/materiales/calculadoras', [CalculadoraController::class,'create'])->name('eliminar.calculadora');
+
+    
+    Route::get('/materiales/tablets', [TabletController::class,'create'])->name('gestion.tablets');
+    Route::get('/materiales/tablets/{id}', [TabletController::class,'show'])->name('detalle.tablet');
+    Route::get('/materiales/tablets/{id}/editar', [TabletController::class,'edit'])->name('editar.tablet');
+    Route::get('/materiales/tablets{id}/eliminar', [TabletController::class,'destroy'])->name('eliminar.tablet');
+
     Route::get('/espacios', function(){ return view('administrador.espacios.index');})->name('espacios');
     
     Route::get('/noticias', [NoticiaController::class, 'admin_index'])->name('noticias');
+    
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 });
