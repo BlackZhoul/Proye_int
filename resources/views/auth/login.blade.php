@@ -1,70 +1,63 @@
 @extends('layouts.navbar')
+
 @section('meta-csrf')
 <meta name="csrf-token" content="{{ csrf_token() }}">
-
 @endsection
-@section('content')
-<div class="flex flex-col min-h-screen">
-    <!-- Contenido principal -->
-    <div class="flex-grow flex justify-center items-center ">
-        <div class="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg w-full max-w-4xl mt-6 px-8 py-8 mx-4 overflow-hidden sm:rounded-lg">
-            <!-- Sección de imagen a la izquierda -->
-            <div class="md:w-1/2  rounded-l-lg">
-                <img src="{{ asset('images/inicio.png') }}" alt="" class="w-full">
-            </div>
-            <!-- Formulario -->
-            <div class="md:w-1/2 p-8 rounded-r-lg">
-                <div class="text-center bg-black p-6 rounded-lg">
-                    <h2 class="text-4xl font-bold text-white mb-2">CEDITEC</h2>
-                    <p class="text-white">Centro de Documentación e Información</p>
-                </div>
-                <form method="POST" action="{{ route('login') }}" class="mt-8">
-                    @csrf
-                    <!-- Dirección de correo electrónico -->
-                    <div class="mb-4 ">
-                        <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico <span class="text-gray-700">*</span></label>
-                        <input id="email" type="email" name="email" required autofocus autocomplete="username"
-                            class="w-full p-2 border border-gray-300 rounded-md mt-1 bg-stone-100" :value="old('email')" placeholder="Correo electrónico">
-                        @error('email')
-                            <span class="text-red-500 text-sm mt-2">{{ $message }}</span>
-                        @enderror
-                    </div>
-                    <!-- Contraseña -->
-                    <div class="mb-4">
-                        <label for="password" class="block text-sm font-medium text-gray-700">Contraseña <span class="text-gray-700">*</span></label>
-                        <input id="password" type="password" name="password" required autocomplete="current-password"
-                            class="w-full p-2 border border-gray-300 rounded-md mt-1 bg-stone-100" placeholder="Contraseña">
-                        @error('password')
-                            <span class="text-red-500 text-sm mt-2">{{ $message }}</span>
-                        @enderror
-                    </div>
 
-                     <!-- Olvidó su contraseña -->
-                    <div class="flex items-center justify-end mt-4">
-                        @if (Route::has('password.request'))
-                            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                            href="{{ route('password.request') }}">
-                            {{ __('¿Olvidaste tu contraseña?') }}
-                            </a>
-                        @endif
+@section('content')
+<div class="min-h-screen flex flex-col justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+
+    <div class="w-full sm:max-w-4xl mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg flex flex-col sm:flex-row">
+        <div class="hidden sm:block w-full sm:w-1/3 flex items-center justify-center sm:justify-start">
+            <img src="images/portada_c.png" alt="Image" class="object-cover w-full h-auto sm:h-full rounded-md">
+        </div>
+
+        <div class="w-full sm:w-2/3 px-6 py-4">
+            <div class="flex justify-center mb-4">
+                <img src="images/logo_ceditec.png" alt="Logo" class="h-32 rounded-lg">
+            </div>
+            <x-auth-session-status class="mb-4" :status="session('status')" />
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+
+                <div>
+                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">{{ __('Correo Electrónico') }}</label>
+                    <div class="mt-2">
+                        <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-gray-200" placeholder="Ingresa tu correo electrónico">
                     </div>
-                    <!-- Botón de inicio de sesión -->
-                    <div>
-                        <button type="submit" class="w-full bg-black text-white p-2 rounded-md mt-4">Iniciar sesión</button>
+                </div>
+
+                <div class="mt-4">
+                    <label for="password" class="block text-sm font-medium leading-6 text-gray-900">{{ __('Contraseña') }}</label>
+                    <div class="flex items-center justify-between mt-1">
+                        <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-gray-200" placeholder="Ingresa tu contraseña">
                     </div>
-                    <!-- Iniciar sesión con Google -->
-                    <div class="mt-4 text-center">
+                </div>
+
+                <div class="flex items-center justify-between mt-4">
+                    <label for="remember_me" class="inline-flex items-center">
+                        <input id="remember_me" type="checkbox"
+                            class="rounded bg-gray-200 border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500 focus:ring-offset-white"
+                            name="remember">
+                        <span class="ml-2 text-sm text-black">{{ __('Recordarme') }}</span>
+                    </label>
+                    <a href="{{ route('password.request') }}" class="text-sm font-semibold text-indigo-600 hover:text-indigo-500">{{ __('¿Olvidaste tu contraseña?') }}</a>
+                </div>
+
+                <div class="flex flex-col mt-6 space-y-4">
+                    <div class="text-center">
                         <button type="button" class="w-full bg-cyan-600 text-white p-2 rounded-md flex items-center justify-center">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google" class="w-5 h-5 mr-2">
-                            Inicia sesión como Melanie Alejandra
+                            Iniciar sesión
                         </button>
                     </div>
-                </form>
-            </div>
+                    <button type="button" class="w-full flex items-center justify-center px-4 py-2 text-sm font-semibold leading-6 text-white bg-black rounded-md shadow-sm hover:bg-gray-900">
+                        <img src="images/b_gmail.png" alt="Gmail" class="h-8 mr-2">
+                        {{ __('Iniciar sesión con Gmail') }}
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 @endsection
-               
-               
 
 
