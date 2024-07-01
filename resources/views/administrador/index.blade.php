@@ -25,9 +25,13 @@
                                 <input type="password" name="password" id="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Ingrese su contraseña">
                             </div>
                             <div>
+<<<<<<< HEAD
+                                <button type="submit" class="w-full bg-cyan-600 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200">Ingresar</button>
+=======
                                 <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200"><a href="{{ route('reservas') }}" class="nav-link">
                                             Ingresar
                                         </a></button>
+>>>>>>> f383f7e1175439035c75755c6cdf9bfb0aae670c
                             </div>
                         </form>
                     </div>
