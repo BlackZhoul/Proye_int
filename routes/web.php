@@ -19,7 +19,7 @@ Route::get('/administrador', function(){ return view('administrador.index');})->
 Route::get('/salas', function(){ return view('salas.index');})->name('salas');
 //Aquí termina
 
-Route::get('/administrador', function(){ return view('administrador.reservas');})->name('administrador');
+Route::get('/administrador', function(){ return view('administrador.index');})->name('administrador');
 Route::get('/administrador/prestamoCalculadoras', function(){ return view('administrador.prestamoCalculadoras');})->name('prestamoCalculadoras');
 Route::get('/administrador/prestamoLibro', function(){ return view('administrador.prestamoLibro');})->name('prestamoLibro');
 Route::get('/administrador/prestamos', function(){ return view('administrador.prestamos');})->name('prestamos');

@@ -41,7 +41,7 @@
         <span class="text-xl font-semibold text-dark_black">Base de datos</span>
         <p class="py-6 text-justify">Consulta libros electrónicos y bases de datos.</p>
         <div class="flex justify-center">
-            <button type="button" onclick="" class="p-2 duration-200 border-2 text-[#2DB4D1] border-[#2DB4D1] font-poppins font-semibold hover:bg-[#e7e7e7]">
+            <button href="{{ route('bd') }}" type="button" onclick="" class="p-2 duration-200 border-2 text-[#2DB4D1] border-[#2DB4D1] font-poppins font-semibold hover:bg-[#e7e7e7]">
                 Ver biblioteca
             </button>
         </div>
