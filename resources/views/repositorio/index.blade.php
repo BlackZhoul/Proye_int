@@ -2,13 +2,13 @@
 
 @section('repositorio_banner')
     <div class="flex items-center justify-center sm:flex-row py-10 bg-[#2DB4D1] ">
-        <h1 class="text-3xl font-black text-center md:text-7xl ">
+        <h1 class="text-4xl font-extrabold text-center md:text-7xl">
             <span class="text-dark_black">REPOSITORIO</span><br><span class="text-white md:ml-14">INSTITUCIONAL</span>
         </h1>
     </div>
     <div class="hidden sm:flex items-center bg-stone-200 p-4 ml-10">
         <img src="{{ asset('images/hogar.png') }}" alt="Ícono" class="w-4 mr-4">
-        <p>Repositorio Institucional de Tecsup</p>
+        <p class="text-lg font-semibold">Repositorio Institucional de Tecsup</p>
     </div>
 @endsection
 
