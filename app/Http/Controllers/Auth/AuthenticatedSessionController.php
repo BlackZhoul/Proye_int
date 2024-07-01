@@ -28,7 +28,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
         if ($request->user()->rol==='bibliotecario') {
-            return redirect()->route('inicio.admin');
+            return redirect()->route('admin.inicio');
         } else {
             return redirect()->route('inicio');
         }
