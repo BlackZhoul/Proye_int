@@ -82,6 +82,11 @@
                                                 Administración
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="{{ route('salas') }}" class="nav-link">
+                                                Salas
+                                            </a>
+                                        </li>
                                     @endauth
 
                                 </ul>
@@ -133,6 +138,11 @@
                                         <li>
                                             <a href="{{ route('administrador') }}" class="nav-link">
                                                 Administración
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('salas') }}" class="nav-link">
+                                                Salas
                                             </a>
                                         </li>
                                        

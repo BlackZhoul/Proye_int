@@ -13,6 +13,7 @@ Route::get('/repositorio', function(){ return view('repositorio.index');})->name
 Route::get('/catalogo', function(){ return view('catalogo.index');})->name('catalogo');
 // Agrega por Angie la primera vista del Administrador
 Route::get('/administrador', function(){ return view('administrador.index');})->name('administrador');
+Route::get('/salas', function(){ return view('salas.index');})->name('salas');
 //Aquí termina
 
 Route::get('/acerca',  function(){ return view('acerca.index');})->name('acerca');
