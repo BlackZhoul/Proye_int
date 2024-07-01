@@ -11,10 +11,13 @@ Route::get('/', function () {
 Route::get('/noticias', [NewsController::class, 'index'])->name('noticias');
 Route::get('/repositorio', function(){ return view('repositorio.index');})->name('repositorio');
 Route::get('/catalogo', function(){ return view('catalogo.index');})->name('catalogo');
+
+Route::get('/bd', function(){ return view('bd.index');})->name('bd');
 // Agrega por Angie la primera vista del Administrador
 Route::get('/administrador', function(){ return view('administrador.index');})->name('administrador');
 Route::get('/salas', function(){ return view('salas.index');})->name('salas');
 //Aquí termina
+
 
 Route::get('/acerca',  function(){ return view('acerca.index');})->name('acerca');
 
@@ -30,3 +33,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+/* Prueba 1 */
+

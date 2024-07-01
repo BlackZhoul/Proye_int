@@ -2,13 +2,14 @@
 
 @section('content')
     <div class="container mx-auto mt-4">
-        <div class="inline-flex mb-4">
-            <a href="#" class="text-gray-800 font-bold py-2 px-4 rounded-l block hover:bg-gray-200">
+        <div class="relative inline-flex mb-4 nav-container">
+            <a href="#" class="text-gray-800 font-bold py-2 px-4 rounded-l block hover:bg-gray-200 nav-link">
                 Nosotros
             </a>
-            <a href="#" class="text-gray-800 font-bold py-2 px-4 rounded-r block hover:bg-gray-200">
+            <a href="#" class="text-gray-800 font-bold py-2 px-4 rounded-r block hover:bg-gray-200 nav-link">
                 Servicios
             </a>
+            <span class="absolute bottom-0 left-0 h-1 bg-gray-800 transition-all duration-300 nav-underline"></span>
         </div>
 
         <div class="sm:flex items-center">
