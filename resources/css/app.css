@@ -5,7 +5,7 @@
 
 
 .nav-link {
-    @apply relative rounded-md py-3 text-white/75 hover:text-white tracking-[1px] md:text-lg
+    @apply relative rounded-md py-3 text-white/75 hover:text-white tracking-[1px] md:text-base
 }
 .nav-link::after{
     @apply content-[''] bg-[#2db4d1] h-[3px] w-[0%] absolute left-0 bottom-[6px] rounded-xl duration-300 

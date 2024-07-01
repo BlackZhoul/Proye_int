@@ -31,7 +31,7 @@
                     <nav class="px-8 flex items-center justify-between py-2 bg-dark_black" x-data="data()"
                         x-init="start()">
                         <div class="flex flex-row md:w-fit items-center justify-between">
-                            <a href="{{ route('inicio') }}" class="flex flex-col text-center text-white py-1">
+                            <a href="{{ route('admin.inicio') }}" class="flex flex-col text-center text-white py-1">
                                 <span class="text-3xl leading-none font-bold">CEDITEC</span>
                                 <span class="text-[10px] leading-none font-normal">Centro de
                                     Documentación<br>e Información</span>
@@ -43,29 +43,41 @@
                         <div class="hidden md:block">
                             <ul class="flex flex-row gap-[2vw]">
                                 <li>
-                                    <a href="{{ route('inicio') }}" class="nav-link">
+                                    <a href="{{ route('admin.inicio') }}" class="nav-link">
                                         Inicio
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('repositorio') }}" class="nav-link">
-                                        Repositorio
+                                    <a href="{{ route('admin.prestamos') }}" class="nav-link">
+                                        Préstamos
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('catalogo') }}" class="nav-link">
-                                        Catálogo
+                                    <a href="{{ route('admin.reservas') }}" class="nav-link">
+                                        Reservas
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ route('admin.materiales') }}" class="nav-link">
+                                        Materiales
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('nosotros') }}" class="nav-link">
-                                        Nosotros
+                                    <a href="{{ route('admin.espacios') }}" class="nav-link">
+                                        Espacios
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ route('admin.noticias') }}" class="nav-link">
+                                        Noticias
                                     </a>
                                 </li>
 
                                 @auth
                                     <li>
-                                        <a href="{{ route('profile.edit') }}" class="nav-link">
+                                        <a href="{{ route('admin.profile.edit') }}" class="nav-link">
                                             
                                             Perfil
 
@@ -107,29 +119,40 @@
                             :class="open ? '' : 'hidden'">
                             <ul class="flex flex-col gap-4">
                                 <li>
-                                    <a href="{{ route('inicio') }}" class="nav-link">
+                                    <a href="{{ route('admin.inicio') }}" class="nav-link">
                                         Inicio
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('repositorio') }}" class="nav-link">
-                                        Repositorio
+                                    <a href="{{ route('admin.prestamos') }}" class="nav-link">
+                                        Préstamos
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('catalogo') }}" class="nav-link">
-                                        Catálogo
+                                    <a href="{{ route('admin.reservas') }}" class="nav-link">
+                                        Reservas
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('admin.materiales') }}" class="nav-link">
+                                        Materiales
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('admin.espacios') }}" class="nav-link">
+                                        Espacios
+                                    </a>
+                                </li>
+
                                 <li>
                                     <a href="{{ route('nosotros') }}" class="nav-link">
-                                        Nosotros
+                                        Noticias
                                     </a>
                                 </li>
 
                                 @auth
                                     <li>
-                                        <a href="{{ route('profile.edit') }}" class="nav-link">
+                                        <a href="{{ route('admin.profile.edit') }}" class="nav-link">
                                             Perfil
                                         </a>
                                     </li>

@@ -6,8 +6,8 @@
 
     <div class="flex justify-center">
         <div class="flex flex-col w-2/3 m-4 bg-black rounded-full">
-            <form action="{{ url('/') }}" class="relative m-4">
-                <input type="text" placeholder="Busca en nuestro catálogo en línea" class="w-full h-12 rounded-full">
+            <form action="{{ route('catalogo') }}" class="relative m-4">
+                <input type="text" name="query" placeholder="Busca en nuestro catálogo en línea" class="w-full h-12 rounded-full">
                 <div class="absolute inset-y-0 right-0 flex items-center pb-1 pr-5 pointer-events-none"><i
                         class="fas fa-search fa-lg" style="color: #000000;"></i></div>
             </form>

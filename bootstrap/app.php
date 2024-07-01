@@ -12,6 +12,14 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         //
+
+
+
+        $middleware->alias([
+
+            'bibliotecario'=> \App\Http\Middleware\Bibliotecario::class,
+
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
