@@ -2,22 +2,20 @@
 
 @section('repositorio_banner')
     <div class="flex items-center justify-center sm:flex-row py-10 bg-[#2DB4D1] ">
-        <h1 class="text-3xl font-black md:text-7xl ">
-            <span class="text-dark_black">REPOSITORIO</span><span class="text-white md:ml-14">INSTITUCIONAL</span>
+        <h1 class="text-3xl font-black text-center md:text-7xl ">
+            <span class="text-dark_black">REPOSITORIO</span><br><span class="text-white md:ml-14">INSTITUCIONAL</span>
         </h1>
     </div>
-    <div class="flex items-center bg-stone-200 p-4 ml-10">
+    <div class="hidden sm:flex items-center bg-stone-200 p-4 ml-10">
         <img src="{{ asset('images/hogar.png') }}" alt="Ícono" class="w-4 mr-4">
         <p>Repositorio Institucional de Tecsup</p>
     </div>
 @endsection
 
 @section('content')
-<div class="px-8"> <!-- Agregado padding en los lados -->
-    <div class="flex justify-between">
-        <!-- Lado Izquierdo -->
-        <div class="w-1/4 bg-white p-4 mr-4 shadow-lg rounded-lg">
-            <!-- Barra de búsqueda -->
+<div class="px-8"> 
+    <div class="flex flex-col sm:flex-row justify-between">
+        <div class="w-full sm:w-1/4 bg-white p-4 mr-4 mb-4 sm:mb-0 shadow-lg rounded-lg">
             <div class="mb-4">
                 <input type="text" placeholder="Buscar en todo el repositorio..." class="w-full p-2 border border-gray-300 rounded-md" />
             </div>
@@ -65,8 +63,7 @@
            
         </div>
         
-        <!-- Lado Derecho -->
-        <div class="w-3/4">
+        <div class="w-full sm:w-3/4">
             <div class="container mx-auto">
                 <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
                     <p class="text-gray-700 mb-4">
@@ -91,40 +88,42 @@
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h2 class="text-xl font-semibold mb-4">Añadido recientemente</h2>
-                    <div class="flex items-center mb-4">
-                        <div class="h-40 w-40 bg-gray-200 rounded-lg mr-4"></div>
-                        <div>
-                            <h3 class="text-blue-500 font-semibold mb-2">
-                                Diseño y análisis de fatiga de un semieje para el sistema de transmisión de un vehículo eléctrico en la competencia Fórmula SAE
-                            </h3>
-                            <p class="text-gray-600 mb-1">Ulloque Echevarría, Víctor Antonio (Universidad de Ingeniería y Tecnología, 2024)</p>
-                            <p class="text-green-500">Acceso abierto</p>
-                            <p class="text-gray-700">
-                            Las fallas por fatiga son un fenómeno muy recurrente y difícil de predecir en los sistemas mecánicos. </p>
+                    <div class="flex flex-col mb-4">
+                        <div class="mb-4 flex items-center">
+                            <div class="h-40 w-40 bg-gray-200 rounded-lg mr-4"></div>
+                            <div>
+                                <h3 class="text-blue-500 font-semibold mb-2">
+                                    Diseño y análisis de fatiga de un semieje para el sistema de transmisión de un vehículo eléctrico en la competencia Fórmula SAE
+                                </h3>
+                                <p class="text-gray-600 mb-1">Ulloque Echevarría, Víctor Antonio (Universidad de Ingeniería y Tecnología, 2024)</p>
+                                <p class="text-green-500">Acceso abierto</p>
+                                <p class="text-gray-700">
+                                Las fallas por fatiga son un fenómeno muy recurrente y difícil de predecir en los sistemas mecánicos. </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex items-center mb-4">
-                        <div class="h-40 w-40 bg-gray-200 rounded-lg mr-4"></div>
-                        <div>
-                            <h3 class="text-blue-500 font-semibold mb-2">
-                                Diseño y análisis de fatiga de un semieje para el sistema de transmisión de un vehículo eléctrico en la competencia Fórmula SAE
-                            </h3>
-                            <p class="text-gray-600 mb-1">Ulloque Echevarría, Víctor Antonio (Universidad de Ingeniería y Tecnología, 2024)</p>
-                            <p class="text-green-500">Acceso abierto</p>
-                            <p class="text-gray-700">
-                            Las fallas por fatiga son un fenómeno muy recurrente y difícil de predecir en los sistemas mecánicos. </p>
+                        <div class="mb-4 flex items-center">
+                            <div class="h-40 w-40 bg-gray-200 rounded-lg mr-4"></div>
+                            <div>
+                                <h3 class="text-blue-500 font-semibold mb-2">
+                                    Diseño y análisis de fatiga de un semieje para el sistema de transmisión de un vehículo eléctrico en la competencia Fórmula SAE
+                                </h3>
+                                <p class="text-gray-600 mb-1">Ulloque Echevarría, Víctor Antonio (Universidad de Ingeniería y Tecnología, 2024)</p>
+                                <p class="text-green-500">Acceso abierto</p>
+                                <p class="text-gray-700">
+                                Las fallas por fatiga son un fenómeno muy recurrente y difícil de predecir en los sistemas mecánicos. </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex items-center mb-4">
-                        <div class="h-40 w-40 bg-gray-200 rounded-lg mr-4"></div>
-                        <div>
-                            <h3 class="text-blue-500 font-semibold mb-2">
-                                Diseño y análisis de fatiga de un semieje para el sistema de transmisión de un vehículo eléctrico en la competencia Fórmula SAE
-                            </h3>
-                            <p class="text-gray-600 mb-1">Ulloque Echevarría, Víctor Antonio (Universidad de Ingeniería y Tecnología, 2024)</p>
-                            <p class="text-green-500">Acceso abierto</p>
-                            <p class="text-gray-700">
-                            Las fallas por fatiga son un fenómeno muy recurrente y difícil de predecir en los sistemas mecánicos. </p>
+                        <div class="flex items-center">
+                            <div class="h-40 w-40 bg-gray-200 rounded-lg mr-4"></div>
+                            <div>
+                                <h3 class="text-blue-500 font-semibold mb-2">
+                                    Diseño y análisis de fatiga de un semieje para el sistema de transmisión de un vehículo eléctrico en la competencia Fórmula SAE
+                                </h3>
+                                <p class="text-gray-600 mb-1">Ulloque Echevarría, Víctor Antonio (Universidad de Ingeniería y Tecnología, 2024)</p>
+                                <p class="text-green-500">Acceso abierto</p>
+                                <p class="text-gray-700">
+                                Las fallas por fatiga son un fenómeno muy recurrente y difícil de predecir en los sistemas mecánicos. </p>
+                            </div>
                         </div>
                     </div>
                 </div>
