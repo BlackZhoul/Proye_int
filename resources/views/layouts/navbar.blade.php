@@ -21,7 +21,7 @@
 
     </head>
 
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased ">
 
         <div class="bg-gray-200 text-black/65">
             <div class="w-full">
@@ -35,7 +35,7 @@
                                     class="flex flex-col text-center text-white py-1">
                                     <span class="text-3xl leading-none font-bold">CEDITEC</span>
                                     <span class="text-[10px] leading-none font-normal">Centro de
-                                        Documentación<br>e Información</span>
+                                      Documentación<br>e Información</span>
                                 </a>
                                 
                             </div>
